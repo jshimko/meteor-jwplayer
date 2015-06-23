@@ -1,8 +1,0 @@
-{
-  "name": "jwplayer",
-  "description": "An easily configured CDN hosted version of JWPlayer using your own license.",
-  "homepage": "https://github.com/jshimko/jwplayer-meteor",
-  "author": "Jeremy Shimko <jeremy.shimko@gmail.com>",
-  "version": "0.0.1",
-  "git": "https://github.com/jshimko/jwplayer-meteor.git"
-}
