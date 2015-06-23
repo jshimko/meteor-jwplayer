@@ -1,12 +1,41 @@
-// Set up the JW Player script import in the head of the page.
 
-var token = Meteor.settings.public.jwplayer.cdn_token;
+JWPlayer = {
 
-var script = document.createElement('script');
+  load: _.once(function(token) {
+    if (!token) {
+      console.warn('Please add your token to JWPlayer.load()');
+      return
+    }
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://jwpsrv.com/library/' + token + '.js';
+    document.head.appendChild(script);
 
-script.type = 'text/javascript';
-script.src = 'https://jwpsrv.com/library/' + token + '.js';
+    this._checkReady();
+  }),
 
-var head = document.getElementsByTagName('head')[0];
+  _checkReady: function() {
+    var self = this;
+    var i = 0;
+    var checkReady = Meteor.setInterval(function(){
+      if (typeof jwplayer !== 'undefined') {
+        self._loaded.set(true);
+        Meteor.clearInterval(checkReady);
+      } else {
+        i += 100;
+        if (i > 5000) {
+          // stop checking if the lib isn't loaded within 5 secs
+          Meteor.clearInterval(checkReady);
+          console.warn('Error loading JW Player from CDN');
+        }
+      }
+    }, 100);
+  },
 
-head.appendChild(script);
+  _loaded: new ReactiveVar(false),
+
+  loaded: function() {
+    return this._loaded.get();
+  }
+
+};
