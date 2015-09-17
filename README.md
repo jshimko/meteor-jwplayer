@@ -2,7 +2,7 @@
 
 An easily configured CDN hosted version of JWPlayer using your own license. 
 
-NOTE: This version only works with JWPlayer v6.  They changed their CDN URL in v7.
+NOTE: This version only works with JWPlayer v7.  They changed their CDN URL after v6.  If you need the old version, use v6.0.0 of this package.
 
 ## Install
 

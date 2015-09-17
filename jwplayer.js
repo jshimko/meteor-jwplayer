@@ -8,7 +8,7 @@ JWPlayer = {
     }
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = 'https://jwpsrv.com/library/' + token + '.js';
+    script.src = 'https://content.jwplatform.com/libraries/' + token + '.js';
     document.head.appendChild(script);
 
     this._checkReady();
