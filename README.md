@@ -15,7 +15,7 @@ meteor add jeremy:jwplayer
 The standard JW Player CDN hosted library provided to you in your account will have a unique token in the URL.  It should look like the following:
 
 ```html
-<script src="https://jwpsrv.com/library/YOUR_KEY_HERE.js"></script>
+<script src="https://content.jwplatform.com/libraries/YOUR_KEY_HERE.js"></script>
 ```
 
 Simply grab the `YOUR_KEY_HERE` section and pass that into the `JWPlayer.load()` call in this plugin and the CDN hosted script will be added to your `<head>`.
