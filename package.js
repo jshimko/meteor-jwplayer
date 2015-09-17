@@ -1,7 +1,7 @@
 Package.describe({
   name: 'jeremy:jwplayer',
   summary: 'An easily configured CDN hosted version of JWPlayer using your own license.',
-  version: '0.1.0',
+  version: '6.0.0',
   git: 'https://github.com/jshimko/meteor-jwplayer.git'
 });
 

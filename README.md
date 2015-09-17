@@ -2,6 +2,8 @@
 
 An easily configured CDN hosted version of JWPlayer using your own license. 
 
+NOTE: This version only works with JWPlayer v6.  They changed their CDN URL in v7.
+
 ## Install
 
 ```bash
